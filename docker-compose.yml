@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:alpine
+  image: 'xamq/snyk_game_repo'
+  ports:
+  - '3000:3000'
+  volumes:
+  - ./nginx.conf:/etc/nginx/nginx.conf
