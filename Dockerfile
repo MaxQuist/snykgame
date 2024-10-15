@@ -1,5 +1,4 @@
-FROM nginx:alpine
-WORKDIR /usr/share/nginx/html
-COPY . /usr/share/nginx/html
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+FROM mhart/alpine-node
+COPY . /app
+CMD node /app/app.js
 EXPOSE 3000
